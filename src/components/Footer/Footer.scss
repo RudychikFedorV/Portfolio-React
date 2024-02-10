@@ -1,0 +1,28 @@
+.footer {
+  grid-area: footer;
+
+  &__img {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70rem;
+    flex-wrap: wrap;
+    @include mobile {
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__copy {
+    background: var(--c-white);
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 35rem;
+      margin-left: 5rem;
+    }
+  }
+}

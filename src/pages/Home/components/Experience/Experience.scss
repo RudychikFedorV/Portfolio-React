@@ -1,0 +1,123 @@
+.experience {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70rem;
+  letter-spacing: 0em;
+  text-transform: capitalize;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title,
+  &__desc {
+    padding: 0 50rem;
+    text-align: center;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 32rem;
+    font-weight: 700;
+    margin-bottom: 25rem;
+  }
+
+  &__desc {
+    max-width: calc(438rem + 100rem);
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  &__items {
+    padding: 18rem 29rem 9rem 37rem;
+    background: var(--c-white);
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20rem;
+    padding: 29rem 0;
+
+    &:not(:last-child) {
+      border-bottom: 1.5rem solid var(--c-bg);
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 50rem;
+    }
+  }
+
+  &__item-info-establishment,
+  &__item-student {
+    display: flex;
+    flex-direction: column;
+    gap: 21rem;
+  }
+
+  &__item-university,
+  &__item-document {
+    font-size: 18rem;
+    font-weight: 500;
+  }
+
+  &__item-student {
+    flex-direction: row;
+    align-items: center;
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10rem;
+    }
+  }
+
+  &__item-role {
+    font: var(--desc);
+    font-size: 15rem;
+    font-weight: 400;
+  }
+
+  &__item-period {
+    width: 111rem;
+    height: 18rem;
+    padding: 4rem 7rem;
+    border-radius: 1rem;
+    background: var(--c-primary);
+    color: var(--c-white);
+    font: var(--date);
+  }
+
+  &__item-specialty-info {
+    width: calc(536 / 904 * 100%);
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__item-document {
+    margin-bottom: 28rem;
+  }
+}

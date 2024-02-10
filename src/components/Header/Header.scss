@@ -1,0 +1,54 @@
+.header {
+  grid-area: header;
+  background: blue;
+  width: 100%;
+  max-width: 108rem;
+}
+
+.head {
+  background: rgb(250, 250, 250);
+  max-width: 108rem;
+  position: relative;
+  @include tablet {
+    max-width: 100%;
+    background-color: transparent;
+  }
+  &__wrap {
+    padding-left: 34rem;
+    padding-right: 34rem;
+    padding-top: 52rem;
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      max-width: 967rem;
+      margin: 0 auto;
+      padding: 10rem;
+    }
+  }
+  &__mode {
+    margin-bottom: 180rem;
+    background-color: transparent;
+    @include tablet {
+      margin-bottom: unset;
+    }
+  }
+  &__list {
+    @include tablet {
+      display: flex;
+      gap: 7px;
+    }
+  }
+  &__list-item {
+    margin-bottom: 42rem;
+    @include tablet {
+      margin-bottom: unset;
+    }
+    img {
+      border-radius: 50%;
+      @include hover-on() {
+        color: var(--c-primary);
+      }
+    }
+  }
+}

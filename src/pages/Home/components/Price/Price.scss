@@ -1,0 +1,99 @@
+.price {
+  &__title {
+    display: flex;
+    justify-content: center;
+    color: var(--c-title);
+    font: var(--h2-title);
+    text-transform: capitalize;
+    margin-bottom: 25rem;
+  }
+  &__desc {
+    max-width: 438rem;
+    margin-inline: auto;
+    text-align: center;
+    color: var(--c-desc);
+    font:var(--desc);
+    text-transform: capitalize;
+    margin-bottom: 50rem;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260rem, 1fr));
+    gap: 21rem;
+  }
+  &__item {
+    background: var(--c-white);
+    padding: 54rem 31rem 25rem 31rem;
+  }
+  &__item-silver {
+    display: flex;
+    justify-content: center;
+    color: var(--c-title);
+    font: var(--h3-title);
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 19rem;
+  }
+  &__item-mostPopular {
+    display: flex;
+    justify-content: center;
+    color: var(--c-title);
+    font: var(--desc);
+    text-transform: capitalize;
+    background: var(--c-primary);
+    margin: -54rem -31rem 31rem -31rem;
+  }
+  &__item-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-bottom: 8rem;
+  }
+  &__item-price {
+    color: var(--c-title);
+    font: var(--h2-title);
+    text-transform: capitalize;
+  }
+  &__item-hour {
+    color: var(--c-title);
+    font: var(--desc);
+    text-transform: capitalize;
+  }
+  &__item-desc {
+    color: var(--c-desc);
+    font: var(--desc);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 21rem;
+  }
+  .position {
+    display: flex;
+    align-items: center;
+    gap: 19rem;
+    margin-bottom: 15rem;
+    cursor: pointer;
+  }
+  &__item-btn {
+    display: inline-block;
+    color: var(--c-title);
+    font: var(--btn-price);
+    text-transform: capitalize;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+    padding: 11rem 41rem;
+    border-radius: 30rem;
+    box-shadow: 0rem 1rem 10rem 0rem rgba(0, 0, 0, 0.15);
+    background: var(--c-white);
+    &.is-active {
+      background: var(--c-primary);
+      filter: drop-shadow(0rem 9rem 19rem rgba(0, 0, 0, 0.15));
+    }
+    &:hover {
+      background: var(--c-primary);
+    }
+  }
+}

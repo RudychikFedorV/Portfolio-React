@@ -1,0 +1,75 @@
+:root {
+  --html-fs: 1px;
+  --ff: "Inter", sans-serif;
+  --transition: 0.2s all ease-in-out;
+
+
+// color
+  --c-white: #fff;
+  --c-black: #000;
+  --c-primary: #ffb400;
+  --c-title: #2b2b2b;
+  --c-desc: #767676;
+  --c-bg: #F0F0F6;
+  --c-primary-hover :rgba(255, 180, 0, 0.95);
+  
+
+
+  // font
+  --h1-title: normal 700 48rem / 124% var(--ff);
+  --h2-title: normal 700 32rem / 124% var(--ff);
+  --h3-title: normal 600 24rem / 124% var(--ff);
+  --h4-title: normal 500 18rem / 124% var(--ff);
+  --h5-title: normal 500 23rem / 124% var(--ff);
+  --h5-title: normal 500 23rem / 124% var(--ff);
+
+
+  --desc-welcome: normal 400 16rem / 150% var(--ff);
+  --desc: normal 400 15rem / 160% var(--ff);
+  --f-title-welcome: normal 700 54rem/150% var(--ff);
+  --f-btn-play: normal 400 24rem/36rem var(--ff);
+  --f-btn-welcome: normal 600 24rem/36rem var(--ff);
+
+  --btn: normal 500 16rem / 19rem var(--ff);
+  --btn-sidebar: normal 600 14rem / 17rem var(--ff);
+  --btn-price: normal 700 14rem / 17rem var(--ff);
+
+  --date: normal 400 10rem / 101% var(--ff);
+  --header: normal 500 12rem / 15rem var(--ff);
+  --link: normal 700 12rem / 14rem var(--ff);
+}
+
+// ---------------------------------
+@include desktop {
+  :root {
+    --h1-title: normal 700 38rem/124% var(--ff);
+  }
+}
+
+@include desktop-small {
+  :root {
+    --h1-title: normal 700 34rem/124% var(--ff);
+    --desc: normal 400 15rem / 160% var(--ff);
+    
+  }
+}
+
+@include tablet-small {
+  :root {
+    --h1-title: normal 600 24rem/30rem var(--ff);
+    --desc: normal 400 13rem / 160% var(--ff);
+  }
+}
+
+
+.html._theme:root{
+  :root{
+    --c-white: #000;
+    --c-black: #fff;
+    --c-primary: #ffb400;
+    --c-title: #f8f8f8;
+    --c-desc: #a0a0a0;
+    --c-bg: #1e1e1e;
+    --c-primary-hover :rgba(255, 180, 0, 0.95);  
+  }
+}

@@ -1,0 +1,224 @@
+.welcome {
+  background: var(--c-white);
+  padding: 0 57rem 0 60rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 27rem;
+    position: relative;
+
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    max-width: 500rem;
+    margin-bottom: 18rem;
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    line-height: 24rem;
+    text-align: left;
+    text-transform: capitalize;
+    max-width: 424rem;
+    margin-bottom: 25rem;
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    img:first-child {
+      @include tablet-small {
+        width: 80%;
+        align-items: center;
+      }
+    }
+   
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+    border-radius: 5rem;
+    background: var(--c-primary);
+    max-width: 154rem;
+    padding: 16rem 32rem;
+    transition: var(--transition);
+    @include tablet {
+      margin-inline: auto;
+    }
+
+  .arrow1,
+  .arrow2 {
+    display: inline-block;
+  }
+
+  .arrow2 {
+    display: none;
+  }
+
+  &:hover {
+    .arrow1 {
+      display: none;
+    }
+
+    .arrow2 {
+      display: inline-block;
+    }
+  }
+
+    &:hover svg path {
+      fill: var(--c-white);
+      // transform: rotate(-20deg);
+      transition: var(--transition);
+    }
+
+    @include desktop {
+      margin-bottom: 13rem;
+    }
+
+    @include desktop-small {
+      justify-content: center;
+      padding: 12rem;
+    }
+
+    @include tablet {
+      justify-content: center;
+      padding: 6rem 0rem;
+    }
+
+    @include mobile {
+      font-size: 14rem;
+      max-width: 139rem;
+    }
+  }
+
+  &__icon {
+    opacity: 0;
+    transform: translateY(100px);
+    transform-origin: center;
+    animation: iconAnimation 3s ease-out forwards;
+
+    @include tablet-small {
+      display: none;
+    }
+  }
+
+  @keyframes iconAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100px) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px) rotate(360deg);
+    }
+  }
+
+  &__icon:nth-child(2) {
+    position: absolute;
+    bottom: 24rem;
+    right: -19rem;
+
+    @include tablet {
+      bottom: 36%;
+      right: 6rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+      bottom: 40%;
+      right: -12rem;
+    }
+  }
+
+  &__icon:nth-child(3) {
+    position: absolute;
+    right: 37rem;
+    top: 66rem;
+  }
+
+  &__icon:nth-child(4) {
+    position: absolute;
+    bottom: 71rem;
+    right: 39%;
+
+    @include desktop-small {
+      bottom: 31rem;
+      right: 39%;
+    }
+    @include tablet {
+      bottom: 36%;
+      right: 89%;
+    }
+
+    @media only screen and (max-width: 790px) {
+      bottom: 39%;
+    right: 88%;
+    }
+  }
+
+  &__icon:nth-child(5) {
+    position: absolute;
+    right: 44%;
+    top: 52rem;
+
+    @include tablet {
+      right: -4%;
+      top: 70%;
+    }
+  }
+
+  &__icon:nth-child(6) {
+    position: absolute;
+    bottom: 112rem;
+    left: 37%;
+
+    @include desktop-small {
+      bottom: 44rem;
+      left: 40%;
+    }
+
+    @include tablet {
+      bottom: 16rem;
+      left: 83%;
+    }
+  }
+
+  &__icon:nth-child(7) {
+    position: absolute;
+    bottom: 29rem;
+    left: 28rem;
+
+    @include desktop-small {
+      bottom: 14rem;
+    }
+    
+    @media only screen and (max-width: 1085px) {
+      bottom: 6rem;
+      left: -26rem;
+    }
+  }
+
+  &__icon:nth-child(8) {
+    position: absolute;
+    top: 30rem;
+    left: -15rem;
+
+    @include desktop-small {
+      left: -25rem;
+    }
+
+    @include tablet {
+      right: -6%;
+      top: 71%;
+    }
+  }
+}

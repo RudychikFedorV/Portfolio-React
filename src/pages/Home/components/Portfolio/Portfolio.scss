@@ -1,0 +1,122 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+
+  &__title {
+    margin-bottom: 25rem;
+  }
+
+  &__title,
+  &__desc {
+    padding: 0 50rem;
+  }
+
+  &__desc,
+  &__ul {
+    margin-bottom: 50rem;
+  }
+
+  &__desc {
+    max-width: calc(438rem + 100rem);
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 37rem;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+    color: var(--c-title);
+    font: var(--h4-title);
+    padding: 0 20rem;
+
+    @include tablet-small {
+      flex-direction: column;
+      gap: 20rem;
+    }
+  }
+
+  &__li {
+    color: var(--c-title);
+  }
+
+  &__li-active {
+    color: var(--c-primary);
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 123.6%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  &__images-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    flex-wrap: wrap;
+
+    @include tablet-small {
+      gap: 15rem;
+    }
+  }
+
+  &__img {
+    max-width: 310px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+
+    @include tablet-small {
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: calc(310 / 300 * 100%);
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: var(--c-title);
+      font-family: "Material Icons";
+      font-weight: 700;
+      font-size: 48rem;
+      background-color: transparent;
+      transition: background-color 0.4s ease-in-out;
+    }
+
+    @include hover-on {
+      &::after {
+        content: "\e145";
+        background: var(--c-primary-hover);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

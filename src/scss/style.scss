@@ -1,0 +1,14 @@
+@import 'vendors/reset';
+
+@import 'utils/mixins';
+@import 'utils/vars';
+
+@import 'layout/base';
+
+@import '../components/Footer/Footer.scss';
+@import '../components/Header/Header.scss';
+@import '../components/Sidebar/Sidebar.scss';
+@import '../components/Portfolio/ModalImg';
+
+@import '../pages/Home/Home.scss';
+@import '../pages/NotFound/NotFound.scss';
